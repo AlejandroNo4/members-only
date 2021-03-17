@@ -9,14 +9,10 @@
       <p class="card-text">
         <%= post.body %>
       </p>
-      <% if signed_in? %>
-        <p class="card-text">
-          By: <%= post.user.email %>
-        </p>
-      <% end %>
+      <p class="card-text">
+        <%= signed_user(post) %>
+      </p>
     </div>
 <% end %>
 <br/>
-<% if signed_in? %>
-  <%= link_to "Create a Post", new_post_path, class: "btn btn-primary" %>
-<% end %>
+<%= create_post_link %>
