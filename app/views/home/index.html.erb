@@ -1,4 +1,4 @@
-<h1>Members Only Posts</h1>
+<h1>Members Only!</h1>
 <br/>
 <% @posts.each do |post| %>
 
@@ -11,8 +11,7 @@
       </p>
       <% if signed_in? %>
         <p class="card-text">
-          By:
-          <%= post.user.email %>
+          By: <%= post.user.email %>
         </p>
       <% end %>
     </div>
