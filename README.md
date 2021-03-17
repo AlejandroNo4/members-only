@@ -64,13 +64,17 @@ If you want to play around with this project, follow these steps.
 
       $ cd members-only
 
-> 2. Install Gems, and run the server on the terminal
+> 2. Install Gems, run migration and the server on the terminal
 
 - You will need to have some gems that are already in the Gemfile. You just need to type and run:
 
       $ bundle install
 
-- In the terminal, type and enter: 
+- Now to migrate:
+
+      $ rails db:migrate
+
+- and finally, to run the server, type and enter:
 
       $ rails server
 

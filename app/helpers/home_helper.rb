@@ -2,7 +2,7 @@ module HomeHelper
 
   def signed_user(post)
     if user_signed_in?
-        post.user.email
+      "By: #{post.user.email}"
     end
   end
 
