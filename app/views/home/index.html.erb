@@ -1,2 +1,23 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Members Only Posts</h1>
+<br/>
+<% @posts.each do |post| %>
+
+    <div class="card-header">
+      <h4><%=post.title %></h4>
+    </div>  
+    <div class="card-body">
+      <p class="card-text">
+        <%= post.body %>
+      </p>
+      <% if signed_in? %>
+        <p class="card-text">
+          By:
+          <%= post.user.email %>
+        </p>
+      <% end %>
+    </div>
+<% end %>
+<br/>
+<% if signed_in? %>
+  <%= link_to "Create a Post", new_post_path, class: "btn btn-primary" %>
+<% end %>
