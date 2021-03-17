@@ -1,10 +1,8 @@
 class PostsController < ApplicationController
-  before_action :signed_in_user, only: [:new, :create]
+  before_action :signed_in_user, only: %i[new create]
 
   def signed_in_user
-    unless user_signed_in?
-      redirect_to new_user_session_path
-    end
+    redirect_to new_user_session_path unless user_signed_in?
   end
 
   def new
