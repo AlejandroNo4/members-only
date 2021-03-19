@@ -1,0 +1,18 @@
+<h1>Members Only!</h1>
+<br/>
+<% @posts.each do |post| %>
+
+    <div class="card-header">
+      <h4><%=post.title %></h4>
+    </div>  
+    <div class="card-body">
+      <p class="card-text">
+        <%= post.body %>
+      </p>
+      <p class="card-text">
+        <%= signed_user(post) %>
+      </p>
+    </div>
+<% end %>
+<br/>
+<%= create_post_link %>
