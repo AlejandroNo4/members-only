@@ -12,6 +12,12 @@ This project was made for learning proposes, to implement authentication systems
 
 If you want to play around with this project, follow these steps.
 
+### Live version
+
+[Live version here!](https://memberso.herokuapp.com/)
+
+<br/>
+
 ### Prerequisites
 
 - Basic knowledge of the terminal of your computer
